@@ -1,0 +1,7 @@
+C:\syracuse\RemoteCodeAnalyzer\TestUtilities\bin\Debug\TestUtilities.dll.config
+C:\syracuse\RemoteCodeAnalyzer\TestUtilities\bin\Debug\TestUtilities.dll
+C:\syracuse\RemoteCodeAnalyzer\TestUtilities\bin\Debug\TestUtilities.pdb
+C:\syracuse\RemoteCodeAnalyzer\TestUtilities\obj\Debug\TestUtilities.csprojResolveAssemblyReference.cache
+C:\syracuse\RemoteCodeAnalyzer\TestUtilities\obj\Debug\TestUtilities.csproj.CoreCompileInputs.cache
+C:\syracuse\RemoteCodeAnalyzer\TestUtilities\obj\Debug\TestUtilities.dll
+C:\syracuse\RemoteCodeAnalyzer\TestUtilities\obj\Debug\TestUtilities.pdb

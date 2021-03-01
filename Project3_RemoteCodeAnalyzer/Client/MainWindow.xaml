@@ -1,0 +1,192 @@
+﻿<Window x:Class="Client.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Client"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="650" Width="500" MinHeight="650" MinWidth="500" Closed="Main_Closed" Closing="Main_OnClose">
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="3*"></RowDefinition>
+
+			<RowDefinition Height="25"></RowDefinition>
+		</Grid.RowDefinitions>
+		<TabControl Grid.Row="0" Name="mainTab" TabStripPlacement="Top" FontFamily="Tahoma" FontWeight="Medium"  FontSize="14" SelectionChanged="mainTab_SelectionChanged" Grid.RowSpan="2">
+			<TabItem x:Name="tabLogin" Header="Login" Width="80">
+				<Grid Background="White">
+					<Grid.RowDefinitions>
+						<RowDefinition Height="60*"/>
+						<RowDefinition Height="50*"/>
+						<RowDefinition Height="51*"/>
+						<RowDefinition Height="50*"/>
+						<RowDefinition Height="65*"/>
+						<RowDefinition Height="37*"/>
+						<RowDefinition Height="44*"/>
+						<RowDefinition Height="47*"/>
+						<RowDefinition Height="69*"/>
+						<RowDefinition Height="92*"/>
+					</Grid.RowDefinitions>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="20*"/>
+						<ColumnDefinition Width="42*"/>
+						<ColumnDefinition Width="100"/>
+						<ColumnDefinition Width="257*"/>
+						<ColumnDefinition Width="65*"/>
+					</Grid.ColumnDefinitions>
+					<TextBlock Margin="10,10,10,0" VerticalAlignment="Top" Grid.ColumnSpan="5" TextWrapping="WrapWithOverflow"  Height="53"><Run Text="Login to to access the Remote Code Repoistory Analyzer. You can "/><Run FontWeight="Bold" Text="Upload "/><Run Text="source files, "/><Run FontWeight="Bold" Text="Download "/><Run Text="source files, view "/><Run FontWeight="Bold" Text="Metrics "/><Run Text="and allow others "/><Run FontWeight="Bold" Text="Access "/><Run Text="to your files."/></TextBlock>
+					<Label Content="Username:" VerticalAlignment="Top" Grid.Row="2" Grid.Column="2" Height="27" />
+					<Label Content="Password:" VerticalAlignment="Top" VerticalContentAlignment="Center"  Grid.Row="3" Grid.Column="2" HorizontalAlignment="Right" Width="100" Height="27"/>
+					<TextBox Grid.Row="2" Grid.Column="3" x:Name="loginUsername" Height="30" TextWrapping="Wrap" Text="Admin" VerticalAlignment="Top"  VerticalContentAlignment="Center" />
+					<PasswordBox Grid.Row="3" Grid.Column="3" x:Name="loginPassword" VerticalAlignment="Top" VerticalContentAlignment="Center"  Height="30" Password="admin"  />
+					<Button x:Name="buttonLogin" Content="Login" HorizontalAlignment="Right" VerticalAlignment="Top" Width="100" Click="Login_Button_Click"  Height="30" Grid.Column="3" Grid.Row="4"/>
+					<TextBox x:Name="LocalMachine" Height="30"  TextWrapping="Wrap" Text="localhost" VerticalAlignment="Top" VerticalContentAlignment="Center"  Grid.Row="7" Grid.Column="3" Margin="0,0,98,0" />
+					<TextBox x:Name="RemoteMachine" Height="30"  TextWrapping="Wrap" Text="localhost" VerticalAlignment="Top" VerticalContentAlignment="Center" Grid.Row="8" Grid.Column="3" Margin="0,0,98,0"/>
+					<TextBox x:Name="LocalPort" HorizontalAlignment="Right" Height="30" TextWrapping="Wrap" Text="8081" VerticalAlignment="Top" VerticalContentAlignment="Center"  Width="82" Grid.Column="3" Grid.Row="7"/>
+					<TextBox x:Name="RemotePort" HorizontalAlignment="Right" Height="30" TextWrapping="Wrap" Text="8080" VerticalAlignment="Top" VerticalContentAlignment="Center"  Width="82" Grid.Column="3" Grid.Row="8"/>
+					<Label Content="Local:" HorizontalAlignment="Left"  VerticalAlignment="Top" Grid.Row="7" Height="24" Grid.Column="2" Width="100"/>
+					<Label Content="Remote:" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="8" Height="24" Grid.Column="2" Width="100"/>
+					<Separator Height="10" VerticalAlignment="Top" Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="5" Margin="0,2,0,0"/>
+					<Label Content="Network Configuration" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="32" Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="3" Width="148"/>
+					<Label x:Name="loginStatus" Content="Not Logged In" HorizontalAlignment="Center" VerticalAlignment="Top" HorizontalContentAlignment="Center" Grid.Row="9"  Grid.Column="2" Grid.ColumnSpan="2" FontSize="24" Height="39" Width="358"/>
+					<Label Content="Please login to start your session" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" HorizontalAlignment="Left" VerticalAlignment="Center" Width="217" />
+					<TextBlock Grid.Column="1" Grid.Row="4" TextWrapping="Wrap" Text="Administrators&#x0a;u:Admin p:admin; u:Professor p:professor&#x0a;Developers&#x0a;u:Student p:student; u:User p:user&#x0a;" Grid.ColumnSpan="3" Margin="0,0,115,0" FontStyle="Italic"/>
+				</Grid>
+			</TabItem>
+			<TabItem x:Name="tabUpload" Header="Upload" IsEnabled="false" Width="80">
+				<Grid Background="White">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="31*"/>
+						<ColumnDefinition Width="200*"/>
+						<ColumnDefinition Width="25*"/>
+						<ColumnDefinition Width="200*"/>
+						<ColumnDefinition Width="30*"/>
+					</Grid.ColumnDefinitions>
+					<Grid.RowDefinitions>
+						<RowDefinition Height="77*"/>
+						<RowDefinition Height="54*"/>
+						<RowDefinition Height="55*"/>
+						<RowDefinition Height="17*"/>
+						<RowDefinition Height="44*"/>
+						<RowDefinition Height="46*"/>
+						<RowDefinition Height="204*"/>
+						<RowDefinition Height="68*"/>
+					</Grid.RowDefinitions>
+
+					<Button x:Name="buttonUploadButton" Content="Upload" Height="30" VerticalAlignment="Top" Click="ButtonUploadedClick" Grid.Row="7" Grid.Column="3" HorizontalAlignment="Left" Width="120"/>
+					<Button Content="Select Directory" VerticalAlignment="Top" Click="ButtonUploadSelectDirectory_Click" Height="36" Grid.Row="3" Grid.Column="3" Grid.RowSpan="2" HorizontalAlignment="Left" Width="145" />
+					<Button Content="Select File(s)" VerticalAlignment="Top" Click="ButtonUploadSelectFiles_Click" Height="37" Grid.Row="2" Grid.Column="3" HorizontalAlignment="Left" Width="145" />
+					<ListBox x:Name="listBoxUploadQueue" Height="183" VerticalAlignment="Top" Grid.Row="6" Grid.ColumnSpan="3" Grid.Column="1"/>
+					<Label Content="Upload Queue:" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="5" RenderTransformOrigin="1.069,0.741" Grid.Column="1" Width="179" Height="27" />
+					<Button x:Name="buttonUploadClearQueueButton" Content="Clear Queue" Height="30" VerticalAlignment="Top" Click="ButtonClearQueueClick" Grid.Row="7" Grid.Column="1" HorizontalAlignment="Right" Width="120"/>
+					<TextBox x:Name="textboxBatchName" Height="30" TextWrapping="Wrap" Text="MySourceFiles" VerticalAlignment="Top" VerticalContentAlignment="Center" Grid.Row="1" Grid.Column="3" Margin="0,0,20,0" />
+					<Label Content="Batch Name:" VerticalAlignment="Top" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" Height="27" Width="90"/>
+					<TextBlock Margin="10,10,10,0" TextWrapping="Wrap" Text="Upload local files for analysis. Each upload is considered a Batch. Please specify a Batch Name which is used to identify the uploaded set of files. Then, use Select File(s) or Select Directory to select files to upload." VerticalAlignment="Top" Height="63" Grid.ColumnSpan="5"/>
+					<Label Content="Select files:" VerticalAlignment="Top" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Right" Height="27" Width="81" />
+					<Label Content="Select a directory:" Grid.Column="1" Grid.Row="3" VerticalAlignment="Top" HorizontalAlignment="Right" Grid.RowSpan="2" Height="27" Width="120" />
+				</Grid>
+			</TabItem>
+			<TabItem x:Name="tabDownload" Header="Download" IsEnabled="false" Selector.Selected="OnTabDownloadSelected" Width="80">
+				<Grid Background="White">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="30"/>
+						<ColumnDefinition Width="200*"/>
+						<ColumnDefinition Width="25*"/>
+						<ColumnDefinition Width="201*"/>
+						<ColumnDefinition Width="30"/>
+					</Grid.ColumnDefinitions>
+					<Grid.RowDefinitions>
+						<RowDefinition Height="81*"/>
+						<RowDefinition Height="37*"/>
+						<RowDefinition Height="163*"/>
+						<RowDefinition Height="10*"/>
+						<RowDefinition Height="33*"/>
+						<RowDefinition Height="163*"/>
+						<RowDefinition Height="33*"/>
+						<RowDefinition Height="70*"/>
+					</Grid.RowDefinitions>
+					<TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="63" Width="468" Grid.ColumnSpan="5"><Run Text="Select the Batch or specific file(s) to download. The downloaded files will be located in the "/><Run FontWeight="Bold" Text="Client"/><Run FontWeight="Bold" Text="\Storage"/><Run Text=" directory."/></TextBlock>
+					<Label Content="Batches:" VerticalAlignment="Top" Grid.Row="1" Grid.Column="1" Height="27" />
+					<Label Content="Files:" VerticalAlignment="Top" Grid.Row="4" Height="27" Grid.Column="1" />
+					<ListBox x:Name="listboxDownloadBatchesList" SelectionChanged="listboxDownloadBatchesList_SelectionChanged" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" />
+					<ListBox x:Name="listboxDownloadFilesList" SelectionMode="Multiple" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="3"/>
+					<Button Content="Download File(s)" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Click="ButtonDownload_Click" Height="30" Grid.Row="7" Grid.Column="3"/>
+					<Button x:Name="buttonDownloadGetFileList" Content="Refresh" VerticalAlignment="Top" Height="30" Click="buttonDownloadGetFileList_Click" Grid.Row="1" Grid.Column="3" HorizontalAlignment="Right" Width="120"/>
+					<Button Content="Download Batch" HorizontalAlignment="Right" VerticalAlignment="Top" Width="120" Height="30" Click="ButtonDownloadBatch_Click" Grid.Row="7" Grid.Column="1"/>
+				</Grid>
+			</TabItem>
+			<TabItem x:Name="tabMetrics" Header="Metrics" IsEnabled="false" Selector.Selected="OnTabDownloadSelected" Width="80">
+				<Grid Background="White">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="30"/>
+						<ColumnDefinition Width="200*"/>
+						<ColumnDefinition Width="25*"/>
+						<ColumnDefinition Width="201*"/>
+						<ColumnDefinition Width="30"/>
+					</Grid.ColumnDefinitions>
+					<Grid.RowDefinitions>
+						<RowDefinition Height="81*"/>
+						<RowDefinition Height="37*"/>
+						<RowDefinition Height="163*"/>
+						<RowDefinition Height="10*"/>
+						<RowDefinition Height="33*"/>
+						<RowDefinition Height="163*"/>
+						<RowDefinition Height="25*"/>
+						<RowDefinition Height="78*"/>
+					</Grid.RowDefinitions>
+					<TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Select the Batch and then specific file to view the Code Analyzer Metrics. This view will be completed for Project #4." VerticalAlignment="Top" Height="63" Width="468" Grid.ColumnSpan="5"/>
+					<Label Content="Batches:" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="1" Grid.Column="1" Height="27" Width="63" />
+					<Label Content="Files:" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="4" Height="27" Grid.Column="1" Width="42" />
+					<ListBox x:Name="listboxMetricsBatchesList" SelectionChanged="listboxMetricsBatchesList_SelectionChanged" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" />
+					<ListBox x:Name="listboxMetricsFilesList" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="3"/>
+					<Button Content="Refresh" Click="buttonDownloadGetFileList_Click"  Grid.Row="1" Grid.Column="3" HorizontalAlignment="Right" Width="120" Height="30" />
+					<Button Content="View Metrics" HorizontalAlignment="Center" VerticalAlignment="Top" Width="120" Height="30" Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="3" Click="ButtonMetricsViewMetrics_Click" />
+				</Grid>
+			</TabItem>
+			<TabItem x:Name="tabAccess" Header="Access" IsEnabled="false" Selector.Selected="OnTabAccessSelected" Width="80">
+				<Grid Background="White">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="30"/>
+						<ColumnDefinition Width="200*"/>
+						<ColumnDefinition Width="25*"/>
+						<ColumnDefinition Width="201*"/>
+						<ColumnDefinition Width="30"/>
+					</Grid.ColumnDefinitions>
+					<Grid.RowDefinitions>
+						<RowDefinition Height="81*"/>
+						<RowDefinition Height="37*"/>
+						<RowDefinition Height="113*"/>
+						<RowDefinition Height="10*"/>
+						<RowDefinition Height="35*"/>
+						<RowDefinition Height="113*"/>
+						<RowDefinition Height="24*"/>
+						<RowDefinition Height="35*"/>
+						<RowDefinition Height="113*"/>
+						<RowDefinition Height="37*"/>
+					</Grid.RowDefinitions>
+					<TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="63" Width="468" Grid.ColumnSpan="5"><Run Text="Select the Batch and then the specific file(s) you wish to grant access. Then select the user who will be granted access. Files which users are granted will show-up as a new batch starting with "/><Run FontWeight="Bold" Text="Grant Access Batch"/><Run Text="."/></TextBlock>
+					<Label Content="Batches:" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="1" Grid.Column="1" Height="27" Width="63"  />
+					<Label Content="Files:" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="4" Height="27" Grid.Column="1" Width="42" />
+					<ListBox x:Name="listboxAccessBatchesList" SelectionChanged="listboxAccessBatchesList_SelectionChanged" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3"/>
+					<ListBox x:Name="listboxAccessFilesList" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="3" SelectionMode="Multiple" />
+					<ListBox x:Name="listboxAccessUsersList" Grid.Row="8" Grid.Column="1" />
+					<Button Content="Grant Access" Margin="0,0,31,0" Click="ButtonAccessGrantAccess_Click" Grid.Column="3" Grid.Row="8" Height="43" VerticalAlignment="Top" HorizontalAlignment="Right" Width="140" />
+					<Button Content="Refersh" VerticalAlignment="Top" Click="ButtonAccessGetFileList_Click"  Grid.Row="1" Grid.Column="3" HorizontalAlignment="Right" Width="120" Height="30" />
+					<Label Content="Select User:" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="7" VerticalAlignment="Top" Width="200" Height="27"/>
+					<TextBlock Grid.Column="3" Grid.Row="8" TextWrapping="Wrap" Text="View granted access files by logging with with selected user and selecting the Download tab." Height="53" VerticalAlignment="Bottom"/>
+				</Grid>
+			</TabItem>
+		</TabControl>
+		<StatusBar Grid.Row="2" Padding="0" Margin="0,0,0,-5">
+			<StatusBarItem Name="status">
+				<TextBlock Name="statusLabel" Height="25" Padding="5, 0" FontSize="12" FontWeight="Bold" Width="333">Status:</TextBlock>
+			</StatusBarItem>
+			<StatusBarItem HorizontalAlignment="Right">
+				<StackPanel Orientation="Horizontal">
+					<TextBlock Name="commStatus" Height="25" Width="111" TextAlignment="Right" FontSize="12" FontWeight="Bold">Off-Line</TextBlock>
+					<Label Width="20"></Label>
+				</StackPanel>
+			</StatusBarItem>
+		</StatusBar>
+	</Grid>
+</Window>

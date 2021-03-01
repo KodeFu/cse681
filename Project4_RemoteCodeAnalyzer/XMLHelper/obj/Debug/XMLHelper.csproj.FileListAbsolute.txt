@@ -1,0 +1,7 @@
+C:\syracuse\RemoteCodeAnalyzer\XMLHelper\bin\Debug\XMLHelper.dll.config
+C:\syracuse\RemoteCodeAnalyzer\XMLHelper\bin\Debug\XMLHelper.dll
+C:\syracuse\RemoteCodeAnalyzer\XMLHelper\bin\Debug\XMLHelper.pdb
+C:\syracuse\RemoteCodeAnalyzer\XMLHelper\obj\Debug\XMLHelper.csprojResolveAssemblyReference.cache
+C:\syracuse\RemoteCodeAnalyzer\XMLHelper\obj\Debug\XMLHelper.csproj.CoreCompileInputs.cache
+C:\syracuse\RemoteCodeAnalyzer\XMLHelper\obj\Debug\XMLHelper.dll
+C:\syracuse\RemoteCodeAnalyzer\XMLHelper\obj\Debug\XMLHelper.pdb

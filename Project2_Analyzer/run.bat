@@ -1,0 +1,1 @@
+bin\Release\Analyzer.exe .\testfiles\testfiles\ test*.cs

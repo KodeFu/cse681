@@ -1,0 +1,10 @@
+C:\syracuse\RemoteCodeAnalyzer\Authentication\bin\Release\Authentication.dll.config
+C:\syracuse\RemoteCodeAnalyzer\Authentication\bin\Release\Authentication.dll
+C:\syracuse\RemoteCodeAnalyzer\Authentication\bin\Release\Authentication.pdb
+C:\syracuse\RemoteCodeAnalyzer\Authentication\bin\Release\XMLHelper.dll
+C:\syracuse\RemoteCodeAnalyzer\Authentication\bin\Release\XMLHelper.pdb
+C:\syracuse\RemoteCodeAnalyzer\Authentication\bin\Release\XMLHelper.dll.config
+C:\syracuse\RemoteCodeAnalyzer\Authentication\obj\Release\Authentication.csprojResolveAssemblyReference.cache
+C:\syracuse\RemoteCodeAnalyzer\Authentication\obj\Release\Authentication.csproj.CoreCompileInputs.cache
+C:\syracuse\RemoteCodeAnalyzer\Authentication\obj\Release\Authentication.dll
+C:\syracuse\RemoteCodeAnalyzer\Authentication\obj\Release\Authentication.pdb

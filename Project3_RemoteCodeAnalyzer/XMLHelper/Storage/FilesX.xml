@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Files>
+  <File>
+    <Id>0</Id>
+    <Filename>Parser.cs</Filename>
+    <Batch>password</Batch>
+    <Owner>Admin</Owner>
+	<Grants>
+		<Username>John</Username>
+		<Username>Bob</Username>
+	</Grants>
+  </File>
+  <File>
+    <Id>1</Id>
+    <Filename>Parser.cs</Filename>
+    <Batch>password</Batch>
+    <Owner>Admin</Owner>
+	<Grants>
+		<Username>Bob</Username>
+	</Grants>
+  </File>
+</Files>

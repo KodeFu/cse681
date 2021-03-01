@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Users>
+  <User>
+    <Id>0</Id>
+    <Username>Admin</Username>
+    <Password>admin</Password>
+    <Role>Administrator</Role>
+  </User>
+  <User>
+    <Id>1</Id>
+    <Username>Professor</Username>
+    <Password>professor</Password>
+    <Role>Administrator</Role>
+  </User>
+  <User>
+    <Id>2</Id>
+    <Username>Student</Username>
+    <Password>student</Password>
+    <Role>Developer</Role>
+  </User>
+  <User>
+    <Id>3</Id>
+    <Username>User</Username>
+    <Password>user</Password>
+    <Role>Developer</Role>
+  </User>
+</Users>

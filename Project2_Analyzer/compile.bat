@@ -1,0 +1,1 @@
+devenv Analyzer.csproj /rebuild release

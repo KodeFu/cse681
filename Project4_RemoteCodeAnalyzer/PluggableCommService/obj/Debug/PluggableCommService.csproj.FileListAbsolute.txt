@@ -1,0 +1,10 @@
+C:\syracuse\RemoteCodeAnalyzer\PluggableCommService\bin\Debug\PluggableCommService.dll.config
+C:\syracuse\RemoteCodeAnalyzer\PluggableCommService\bin\Debug\PluggableCommService.dll
+C:\syracuse\RemoteCodeAnalyzer\PluggableCommService\bin\Debug\PluggableCommService.pdb
+C:\syracuse\RemoteCodeAnalyzer\PluggableCommService\bin\Debug\TestUtilities.dll
+C:\syracuse\RemoteCodeAnalyzer\PluggableCommService\bin\Debug\TestUtilities.pdb
+C:\syracuse\RemoteCodeAnalyzer\PluggableCommService\bin\Debug\TestUtilities.dll.config
+C:\syracuse\RemoteCodeAnalyzer\PluggableCommService\obj\Debug\PluggableCommService.csprojResolveAssemblyReference.cache
+C:\syracuse\RemoteCodeAnalyzer\PluggableCommService\obj\Debug\PluggableCommService.csproj.CoreCompileInputs.cache
+C:\syracuse\RemoteCodeAnalyzer\PluggableCommService\obj\Debug\PluggableCommService.dll
+C:\syracuse\RemoteCodeAnalyzer\PluggableCommService\obj\Debug\PluggableCommService.pdb
