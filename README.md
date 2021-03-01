@@ -1,3 +1,3 @@
 # CSE681 Software Modeling
 
-Project for Software Modeling class.
+Projects for Software Modeling class.
